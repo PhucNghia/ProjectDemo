@@ -1,11 +1,17 @@
 class PostsController < ApplicationController
   before_action :load_post, only: [:show, :edit, :update, :destroy]
+  before_action :join_user_post, only: [:index, :show]
 
   def index
     @posts = Post.order("created_at DESC")
+    # @q = Post.ransack params[:q]
+    # @posts = @q.result(distinct: true).order(id: :asc).page(params[:page])
+    #   .per Settings.perhomepage
   end
 
   def show
+    @comments = @post.comments.all
+    @comment = @post.comments.build
   end
 
   def new
@@ -16,6 +22,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    @comment = Comment.build
     @post = Post.new(post_params)
     if @post.save
       redirect_to @post
@@ -44,5 +51,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:user_id, :title, :body, :picture)
+  end
+
+  def join_user_post
+    @join_user_post = Comment.joins(:user, :post)
   end
 end

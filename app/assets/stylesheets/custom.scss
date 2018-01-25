@@ -13,6 +13,7 @@ $alto-color: #DDD;
 $white-nav-a: white;
 $earls-green-color: #B0AF35;
 $swiss-coffee: #faf6f6;
+$bright-turquoise: #23de9d;
 
 /*body*/
 body{
@@ -79,30 +80,12 @@ table, th, table tr td{
   margin-top: 6px;
   font-size: 20px;
 }
-#search .btn{
-  background: $earls-green-color;
-}
-.user{
-  color: red !important;
-}
-.sort{
-  color: $white-nav-a !important;
-  margin-right: 20px;
+
+.table tr td a{
+  text-decoration: none;
 }
 
-/* product */
-.show_img_book{
-  float: left;
-}
-.show_img_book img{
-  width: 200px;
-  height: 300px;
-}
-.show_conent_book{
-  margin-left: 220px;
-  padding-bottom: 20px;
-}
-.list_img img{
-  width: 120px;
-  height: 150px;
+.table-hover tr td a:hover{
+  color: $bright-turquoise;
+  background-color: white;
 }
