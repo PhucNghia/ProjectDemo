@@ -1,0 +1,24 @@
+<header class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand">
+        <%= link_to "Home", root_path %>
+      </div>
+    </div>
+    <ul class="nav navbar-right navbar-nav">
+      <li><%= link_to t(".about"), "#" %></li>
+      <li><%= link_to t(".contact"), "#" %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to image_tag(current_user.avatar), "#", {class: "avatar"} %></li>
+        <li><%= link_to current_user.name, edit_user_registration_path %></li>
+        <li><%= link_to t(".log_out"), destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to t(".signin"), new_user_session_path %></li>
+        <li><%= link_to t(".register"), new_user_registration_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+<div class="logo">
+  <%= image_tag("rubyonrail.jpg") %>
+</div>

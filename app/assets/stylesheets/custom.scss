@@ -1,0 +1,107 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+/* mixins, variables, etc. */
+
+$bue-backround-nav: #36648B;
+$red-backround-hover: red;
+$red-color-h1: red;
+$black-navbar: black;
+$gray-table: gray;
+$white-color: #FFFFFF;
+$alto-color: #DDD;
+$white-nav-a: white;
+$earls-green-color: #B0AF35;
+$swiss-coffee: #faf6f6;
+$bright-turquoise: #23de9d;
+
+/*body*/
+body{
+  background: $swiss-coffee !important;
+}
+th{
+  text-align: center;
+}
+
+/*header*/
+.nav a{
+  color: $white-nav-a !important;
+}
+.navbar{
+  background: $bue-backround-nav !important;
+  margin-top: -33px;
+}
+.dropdown-menu{
+  background: $bue-backround-nav !important;
+}
+.nav ul li:hover a{
+  background: $red-backround-hover;
+}
+.avatar img{
+  margin-top: -5px;
+  width: 30px;
+  height: 40px;
+}
+/*left*/
+.left{
+  padding-right: 10px;
+}
+.carts img{
+  margin-left: 700px;
+  margin-top: -58px;
+  width: 71px;
+  height: 62px;
+  display: block
+}
+
+/*user*/
+h1{
+  color: $red-color-h1;
+  text-align: center;
+}
+.navbar{
+  background: $black-navbar;
+}
+table, th, table tr td{
+  border: 2px solid $gray-table !important;
+}
+.btn{
+  color: $white-color !important;
+}
+.option img:hover{
+  background: $alto-color;
+}
+.option img{
+  width: 30px;
+  height: 30px;
+}
+#search .input{
+  width: 600px;
+  height: 35px;
+  margin-top: 6px;
+  font-size: 20px;
+}
+
+.table tr td a{
+  text-decoration: none;
+}
+
+.table-hover tr td a:hover{
+  color: $bright-turquoise;
+  background-color: $swiss-coffee;
+}
+
+.navbar-brand a{
+  color: white !important;
+  text-decoration: none;
+}
+
+.navbar-brand a:hover{
+  background-color: $bue-backround-nav;
+}
+
+.logo img{
+  margin-top: -20px;
+  width: 100%;
+  height: 200px;
+}

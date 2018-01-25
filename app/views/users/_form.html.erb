@@ -1,0 +1,59 @@
+<%= form_for @user do |form| %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-4">
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <div class="alert alert-danger">
+           <%= t("users.form.error_messages") %>
+              <%= @user.errors.count %> <%= t("users.form.error") %>.
+          </div>
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+       </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label t "users.name" %>
+        <%= form.text_field :name, id: :name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :Avatar %>
+        <%= form.file_field :avatar, accept: "image/jpeg, image/gif, image/png, image/jpg" %>
+      </div>
+
+      <div class="field">
+        <%= form.label t "users.password" %>
+        <%= form.password_field :password, id: :password %>
+      </div>
+
+      <div class="field">
+        <%= form.label t "users.password_confirm" %>
+        <%= form.password_field :password_confirmation, id: :password_confirmation %>
+      </div>
+
+      <div class="field">
+        <%= form.label t "users.email" %>
+        <%= form.text_field :email, id: :email %>
+      </div>
+
+      <div class="field">
+        <%= form.label t "users.phone"%>
+        <%= form.text_field :phone, id: :phone %>
+      </div>
+
+      <div class="field">
+        <%= form.label t "users.address" %>
+        <%= form.text_field :address, id: :address %>
+      </div>
+      <% if @check_new %>
+        <%= form.submit t("users.submit"), class: "btn btn-primary" %>
+      <% else %>
+        <%= form.submit t("users.update"), class: "btn btn-primary" %>
+      <% end %>
+      <%= link_to t("users.back"), :back, class: "btn btn-primary" %>
+  </div>
+<% end %>

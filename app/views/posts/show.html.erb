@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1><b><%= @post.title %></b></h1>
+<div class="showplan well">
+  <%= @post.body.html_safe %>
+</div>
+
+<p>
+  <%= @post.picture %>
+</p>
+
+<h3>Comments</h3>
+<% if user_signed_in? %>
+  <%#= render partial: "comments/form", locals: { comment: @comment } %>
+
+  <%= form_for Comment.new, url: post_comments_path(@post), remote: true do |form| %>
+    <div class="field">
+      <%= form.hidden_field :post_id, value: @post.id %>
+    </div>
+
+    <div class="field">
+      <%= form.text_area :content, rows: 3, id: :content, placeholder: "comment...", id: "content" %>
+    </div>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+<% end %>
+
+<div id="comment">
+  <% if @comments.any? %>
+    <% @comments.each do |comment| %>
+      <div>
+        <strong><%= comment.user.name %></strong>
+        <br />
+        <p><%= comment.content %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<div id="paginator">
+  <%= paginate @comments, theme: "twitter-bootstrap-3" %>
+</div>
+
+<% if user_signed_in? && @post.user.id == current_user.id%>
+  <%= link_to "Edit", edit_post_path(@post) %>
+<% end %>

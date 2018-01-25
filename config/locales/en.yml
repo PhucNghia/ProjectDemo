@@ -1,33 +1,153 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  controller:
+    authors_controller:
+      create_author: "Thêm tác giả thành công"
+      update_author: "Cập nhật tác giả thành công"
+      delete_author: "Xóa tác giả thành công"
+      no_find_author: "Không tìm thấy tác giả "
+    books_controller:
+      create_book: "Thêm sách thành công"
+      update_book: "Cập nhật sách thành công"
+      delete_book: "Xóa sách thành công"
+      no_find_book: "Không tìm thấy sách"
+    carts_controller:
+      no_find_cart: "Không tìm thấy bảng giỏ hàng"
+    categories_controller:
+      create_category: "Thêm thể loại thành công"
+      update_category: "Cập nhật thể loại thành công"
+      delete_category: "Xóa thể loại thành công"
+      no_find_category: "Không tìm thấy thể loại"
+    order_controller:
+      before_signup: "Mời bạn đăng nhập trước khi thanh toán"
+      success_order: "Đặt hàng thành công"
+      fail_order: "Đặt hàng thất bại"
+      update_order: "Cập nhật đơn hàng thành công"
+      delete_order: "Xóa đơn hàng thành công"
+      no_find_order: "Không tìm thấy đơn hàng"
+    publishers_controller:
+      create_publisher: "Thêm NXB thành công"
+      update_publisher: "Cập nhật NXB thành công"
+      delete_publisher: "Xóa NXB thành công"
+      no_fine_publisher: "Không tìm thấy NXB"
+    users_controller:
+      no_account: "Không tồn tại tài khoản này"
+      success_signup: "Đăng ký thành công"
+      success_update: "Cập nhật thành công"
+      success_delete: "Đã xóa người dùng"
+      danger_cant_delete: "Không thể xóa tài khoản này"
+    sessions_carts_controller:
+      delete_product: "Xóa sản phẩm thành công"
+  layouts:
+    header:
+      about: "Giới thiệu"
+      contact: "Liên hệ"
+      signin: "Đăng nhập"
+      profile: "Thông tin tài khoản"
+      settings: "Cài đặt"
+      register: "Đăng ký"
+      log_out: "Thoát"
+      manage: "Quản lý"
+      users: "Quản lý người dùng"
+      books: "Quản lý sách"
+      orders: "Quản lý đơn hàng"
+      authors: "Quản lý tác giả"
+      categories: "Quản lý thể loại"
+      publishers: "Quản lý NXB"
+    left:
+      category: DANH MỤC SÁCH
+      literature: "Sách văn học"
+      economic: "Sách kinh tế"
+      comic: "Truyện tranh"
+      math: "Sách toán học"
+      novel: "Tiểu thuyết"
+      cart: "Giỏ hàng"
+    footer:
+      home: "Trang chủ"
+      about: "Giới thiệu"
+      contact: "Liên hệ"
+    search:
+      search: "Tìm kiếm"
+  sessions:
+    login: "Đăng nhập"
+    address_email: "Nhập địa chỉ email"
+    email: "Nhập email"
+    pass: "Nhập mật khẩu"
+    password: "Mật khẩu"
+    remember_me: "Nhớ mật khẩu"
+  static_pages:
+    price: "Giá: "
+    vnd: " vnđ"
+    category: "Thể loại: "
+    publisher: "NXB: "
+    add_to_cart: "Thêm vào giỏ"
+  users:
+    form:
+      error_messages: "Có"
+      error: "lỗi, mời bạn nhập lại"
+      account: "Tài khoản"
+    list_users: "Danh sách người dùng"
+    name: "Tên"
+    password: "Mật khẩu"
+    current_password: "Mật khẩu hiện tại"
+    leave_blank: "(Để trống nếu bạn không muốn thay đổi nó)"
+    email: "Email"
+    phone: "Số điện thoại"
+    address: "Địa chỉ"
+    back: "Quay lại"
+    show: "Hiển thị"
+    edit1: "Cập nhật"
+    edit2: "Cập nhật thông tin"
+    update: "Cập nhật"
+    destroy: "Xóa"
+    add_user: "Thêm người dùng"
+    confirm_delete: "Bạn có chắc chắn xóa người dùng không?"
+    create_user: "Đăng ký tài khoản"
+    submit: "Đăng ký"
+    password_confirm: "Nhập lại mật khẩu"
+    option: "Tùy chọn"
+  authors:
+    show: "Hiển thị"
+    back: "Quay lại"
+    edit_author: "Sửa tác gỉa"
+    edit: "Sửa"
+    destroy: "Xóa"
+    add: "Thêm tác gỉa"
+    confirm_delete: "Bạn có chắc chắn xóa tác gỉa không?"
+    add_author: "Thêm tác gỉa"
+  books:
+    product: "Danh sách sản phẩm"
+    picture: "Hình ảnh"
+    name: "Tên"
+    price: "Giá"
+    status: "Trạng thái"
+    category: "Thể loại"
+    publisher: "NXB"
+    author: "Tác giả"
+    option: "Tùy chọn"
+    add_book: "Thêm sách"
+    update_book: "Cập nhật sách"
+    status_true: "Còn hàng"
+    status_false: "Hết hàng"
+  session_carts:
+    cart: "GIỎ HÀNG"
+    empty_cart: "Giỏ hàng rỗng"
+    picture: "Hình ảnh"
+    name: "Tên"
+    price: "Giá"
+    amount: "Số lượng"
+    total_price: "Thành tiền"
+    delete_product: "Xóa hàng"
+    vnd: " vnđ"
+    total: "Tổng"
+    pay: "Thanh toán"
+    delete_cart: "Xóa giỏ hàng"
+  orders:
+    code_order: "Mã đơn hàng"
+    create_order: "Đơn hàng"
+    edit_order: "Cập nhật đơn hàng"
+    checkout: "Đặt hàng"
+    list_order: "Danh sách đơn hàng"
+    product: "Sản phẩm"
+    amount: "Số lượng"
+    date: "Ngày mua"
+    total_price: "Tổng tiền"

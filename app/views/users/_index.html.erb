@@ -1,0 +1,33 @@
+<table class="table table-hover" style="text-align: center;" >
+  <thead>
+    <tr>
+      <th>Avatar</th>
+      <th><%= t "users.name" %></th>
+      <th><%= t "users.email" %></th>
+      <th><%= t "users.phone" %></th>
+      <th><%= t "users.address" %></th>
+      <th colspan="3"><%= t "users.option" %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= image_tag(user.avatar) %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.address %></td>
+        <td><%= link_to image_tag("show.png"), user_url(user.id),
+          class: "option" %></td>
+        <td><%= link_to image_tag("edit.png"), edit_user_path(user.id),
+          class: "option" %></td>
+        <td><%= link_to image_tag("delete.png"), user_url(user.id),
+          class: "option",
+        method: :delete, data: {confirm: t("users.confirm_delete")} %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div id="paginator">
+</div>

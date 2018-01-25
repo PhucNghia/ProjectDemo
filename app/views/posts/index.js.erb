@@ -1,0 +1,2 @@
+$('#result').html('<%= j render partial: "post_url", collection: @posts %>')
+$('#paginator').html('<%= j paginate(@comments, theme: "twitter-bootstrap-3" ,remote: true).to_s %>');
