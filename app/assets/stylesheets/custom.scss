@@ -1,0 +1,108 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+/* mixins, variables, etc. */
+
+$bue-backround-nav: #36648B;
+$red-backround-hover: red;
+$red-color-h1: red;
+$black-navbar: black;
+$gray-table: gray;
+$white-color: #FFFFFF;
+$alto-color: #DDD;
+$white-nav-a: white;
+$earls-green-color: #B0AF35;
+$swiss-coffee: #faf6f6;
+
+/*body*/
+body{
+  background: $swiss-coffee !important;
+}
+th{
+  text-align: center;
+}
+
+/*header*/
+.nav a{
+  color: $white-nav-a !important;
+}
+.navbar{
+  background: $bue-backround-nav !important;
+  margin-top: -33px;
+}
+.dropdown-menu{
+  background: $bue-backround-nav !important;
+}
+.nav ul li:hover a{
+  background: $red-backround-hover;
+}
+.avatar img{
+  width: 20px;
+  height: 30px;
+}
+/*left*/
+.left{
+  padding-right: 10px;
+}
+.carts img{
+  margin-left: 700px;
+  margin-top: -58px;
+  width: 71px;
+  height: 62px;
+  display: block
+}
+
+/*user*/
+h1{
+  color: $red-color-h1;
+  text-align: center;
+}
+.navbar{
+  background: $black-navbar;
+}
+table, th, table tr td{
+  border: 2px solid $gray-table !important;
+}
+.btn{
+  color: $white-color !important;
+}
+.option img:hover{
+  background: $alto-color;
+}
+.option img{
+  width: 30px;
+  height: 30px;
+}
+#search .input{
+  width: 600px;
+  height: 35px;
+  margin-top: 6px;
+  font-size: 20px;
+}
+#search .btn{
+  background: $earls-green-color;
+}
+.user{
+  color: red !important;
+}
+.sort{
+  color: $white-nav-a !important;
+  margin-right: 20px;
+}
+
+/* product */
+.show_img_book{
+  float: left;
+}
+.show_img_book img{
+  width: 200px;
+  height: 300px;
+}
+.show_conent_book{
+  margin-left: 220px;
+  padding-bottom: 20px;
+}
+.list_img img{
+  width: 120px;
+  height: 150px;
+}
